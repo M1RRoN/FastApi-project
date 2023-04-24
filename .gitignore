@@ -9,3 +9,5 @@ __pycache__/
 *.py[cod]
 .pyc
 *.pyc
+coverage.xml
+test-coverage-tool

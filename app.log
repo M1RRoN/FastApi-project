@@ -1,0 +1,9 @@
+INFO:root:Retrieved user. User id: 3, User name: john_doe, User email: john_doe@example.com
+WARNING:root:User with id 2 not found
+INFO:root:Retrieved user. User id: 1, User name: nameupdate, User email: emailupdate
+INFO:root:Retrieved user. User id: 1, User name: nameupdate, User email: emailupdate
+INFO:root:User john_doe has 1 projects
+INFO:root:Created user. User id: 5, User name: test123, User email: test123@example.com
+INFO:root:Project with id 2 created by user 1
+INFO:root:Retrieved all users. Count: 0
+INFO:root:Retrieved all users. Count: 0

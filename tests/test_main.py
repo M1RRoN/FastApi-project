@@ -2,7 +2,6 @@ import factory
 from fastapi.encoders import jsonable_encoder
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.testing import db
 from starlette.testclient import TestClient
 
 from app.main import app
@@ -61,7 +60,9 @@ def test_create_user():
 # тесты для роута создания проекта для пользователя
 def test_create_project():
     user_data = UserFactory.build()
-    project_data = {"title": "Test Project", "description": "Test Project123", "owner": jsonable_encoder(user_data)}
+    project_data = {"title": "Test Project",
+                    "description": "Test Project123",
+                    "owner": jsonable_encoder(user_data)}
     user_response = client.post("/users/", json=jsonable_encoder(user_data))
     user_id = user_response.json()["id"]
 
@@ -74,10 +75,14 @@ def test_create_project():
 
 # тесты для роута добавления изображения в проект пользователя
 def test_create_image_for_project():
-    user_response = client.post("/users/", json={"name": "Test User", "email": "test1@example.com"})
+    user_response = client.post("/users/",
+                                json={"name": "Test User",
+                                      "email": "test1@example.com"})
     user_id = user_response.json()["id"]
 
-    project_response = client.post(f"/users/{user_id}/projects/", json={"title": "Test Project2", "description": "Test Project2"})
+    project_response = client.post(f"/users/{user_id}/projects/",
+                                   json={"title": "Test Project2",
+                                         "description": "Test Project2"})
     project_id = project_response.json()["id"]
 
     image = ("test_image.png", open("tests/test_image.png", "rb"))
@@ -89,9 +94,13 @@ def test_create_image_for_project():
 
 
 def test_get_project_count():
-    user_response = client.post("/users/", json={"name": "Test User234634", "email": "test34636@example.com"})
+    user_response = client.post("/users/",
+                                json={"name": "Test User234634",
+                                      "email": "test34636@example.com"})
     user_id = user_response.json()["id"]
-    client.post(f"/users/{user_id}/projects/", json={"title": "Test Project2", "description": "Test Project2"})
+    client.post(f"/users/{user_id}/projects/",
+                json={"title": "Test Project2",
+                      "description": "Test Project2"})
     response = client.get(f"/users/{user_id}/project_count")
     assert response.status_code == 200
     assert response.json() == 1

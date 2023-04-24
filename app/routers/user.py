@@ -27,7 +27,9 @@ def create_user(user: UserCreate, db: Session = Depends(get_db)):
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
-    logging.info(f"Created user. User id: {db_user.id}, User name: {db_user.name}, User email: {db_user.email}")
+    logging.info(f"Created user. User id: {db_user.id}, "
+                 f"User name: {db_user.name}, "
+                 f"User email: {db_user.email}")
     return db_user
 
 
@@ -37,7 +39,9 @@ def read_user(user_id: int, db: Session = Depends(get_db)):
     if db_user is None:
         logging.warning(f"User with id {user_id} not found")
         raise HTTPException(status_code=404, detail="User not found")
-    logging.info(f"Retrieved user. User id: {db_user.id}, User name: {db_user.name}, User email: {db_user.email}")
+    logging.info(f"Retrieved user. User id: {db_user.id}, "
+                 f"User name: {db_user.name}, "
+                 f"User email: {db_user.email}")
     return db_user
 
 
@@ -50,7 +54,9 @@ def update_user(user_id: int, user: UserUpdate, db: Session = Depends(get_db)):
     db_user.email = user.email
     db.commit()
     db.refresh(db_user)
-    logging.info(f"Updated user. User id: {db_user.id}, User name: {db_user.name}, User email: {db_user.email}")
+    logging.info(f"Updated user. User id: {db_user.id}, "
+                 f"User name: {db_user.name}, "
+                 f"User email: {db_user.email}")
     return db_user
 
 
@@ -79,6 +85,8 @@ def read_user_project_count(user_id: int, db: Session = Depends(get_db)):
     db_user = db.query(models.User).filter(models.User.id == user_id).first()
     if db_user is None:
         raise HTTPException(status_code=404, detail="User not found")
-    project_count = db.query(models.Project).filter(models.Project.owner_id == user_id).count()
+    project_count = (db.query(models.Project)
+                     .filter(models.Project.owner_id == user_id).count()
+                     )
     logging.info(f"User {db_user.name} has {project_count} projects")
     return project_count

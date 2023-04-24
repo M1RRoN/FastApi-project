@@ -18,7 +18,11 @@ def create_project_for_user(
     if db_user is None:
         logging.error(f"User with id {user_id} not found")
         raise HTTPException(status_code=404, detail="User not found")
-    db_project = models.Project(title=project.title, description=project.description, owner_id=user_id)
+    db_project = models.Project(
+        title=project.title,
+        description=project.description,
+        owner_id=user_id
+    )
     db.add(db_project)
     db.commit()
     db.refresh(db_project)

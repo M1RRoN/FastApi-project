@@ -61,7 +61,9 @@ def read_image(image_id: int, db: Session = Depends(get_db)):
     if db_image is None:
         logging.error(f"Project with id {image_id} not found")
         raise HTTPException(status_code=404, detail="Image not found")
-    logging.info(f"Retrieved image. Image id: {db_image.id}, Image filename: {db_image.filename}")
+    logging.info(
+        f"Retrieved image. Image id: {db_image.id}, Image filename: {db_image.filename}"
+    )
     return db_image
 
 

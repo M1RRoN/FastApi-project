@@ -11,3 +11,5 @@ __pycache__/
 *.pyc
 coverage.xml
 test-coverage-tool
+app.db
+test.db

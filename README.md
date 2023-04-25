@@ -15,3 +15,7 @@ Run docker
 ```bash
 docker-compose up --build
 ```
+## API documentation
+This API is documented using Swagger UI.
+
+To view the documentation, go to http://localhost:8000/docs.

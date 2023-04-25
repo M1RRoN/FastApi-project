@@ -15,6 +15,7 @@ app.include_router(project.router)
 app.include_router(image.router)
 
 
+@app.get("/auth")
 def get_current_username(credentials: HTTPBasicCredentials = Depends(security)):
     correct_username = "testuser"
     correct_password = "testpassword"

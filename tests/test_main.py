@@ -56,7 +56,11 @@ def test_create_user():
 
 def test_read_user():
     # создаем пользователя для теста
-    db_user = User(username="testuse2r", email="testuser2@example.com", hashed_password="testhash2")
+    db_user = User(
+        username="testuse2r",
+        email="testuser2@example.com",
+        hashed_password="testhash2"
+    )
     db: Session = next(override_get_db())
     db.add(db_user)
     db.commit()
@@ -74,7 +78,11 @@ def test_read_user():
 
 def test_update_user():
     # создаем пользователя для теста
-    db_user = User(username="testuser3", email="testuser3@example.com", hashed_password="testhash3")
+    db_user = User(
+        username="testuser3",
+        email="testuser3@example.com",
+        hashed_password="testhash3"
+    )
     db: Session = next(override_get_db())
     db.add(db_user)
     db.commit()
@@ -91,7 +99,11 @@ def test_update_user():
 
 def test_delete_user():
     # создаем пользователя для теста
-    db_user = User(username="testuser4", email="testuser4@example.com", hashed_password="testhash4")
+    db_user = User(
+        username="testuser4",
+        email="testuser4@example.com",
+        hashed_password="testhash4"
+    )
     db: Session = next(override_get_db())
     db.add(db_user)
     db.commit()

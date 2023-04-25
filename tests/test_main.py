@@ -1,11 +1,14 @@
 import factory
+from factory import Sequence
 from fastapi.encoders import jsonable_encoder
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, Session
+from sqlalchemy.testing import db
 from starlette.testclient import TestClient
 
 from app.main import app
 from app.models.models import User, Project
+from app.schemas.users import UserCreate
 from database.database import Base, get_db
 
 SQLALCHEMY_DATABASE_URL_TEST = "sqlite:///./test.db"
@@ -32,39 +35,45 @@ def override_get_db():
 app.dependency_overrides[get_db] = override_get_db
 
 
-class UserFactory(factory.alchemy.SQLAlchemyModelFactory):
-    class Meta:
-        model = User
-
-    name = factory.Faker('name')
-    email = factory.Faker('email')
-
-
-class ProjectFactory(factory.alchemy.SQLAlchemyModelFactory):
-    class Meta:
-        model = Project
-
-    title = factory.Faker('sentence')
-    description = factory.Faker('text')
-    owner = factory.SubFactory(UserFactory)
-
-
 def test_create_user():
-    user_data = UserFactory.build()
-    response = client.post("/users/", json=jsonable_encoder(user_data))
+    data = {
+        "username": "testuser",
+        "email": "testuser@example.com",
+        "password": "testpassword"
+    }
+    response = client.post("/users/", json=data)
     assert response.status_code == 200
-    assert response.json()["name"] == user_data.name
-    assert response.json()["email"] == user_data.email
+    user = response.json()
+    assert user["username"] == data["username"]
+    assert user["email"] == data["email"]
+    assert "hashed_password" not in user
+
+    db: Session = next(override_get_db())
+    db_user = db.query(User).filter(User.email == data["email"]).first()
+    assert db_user is not None
+    assert db_user.username == data["username"]
+    assert db_user.email == data["email"]
+    assert db_user.hashed_password is not None
+    assert db_user.hashed_password != data["password"]
+    assert db_user.verify_password(data["password"]) is True
 
 
 # тесты для роута создания проекта для пользователя
 def test_create_project():
-    user_data = UserFactory.build()
-    project_data = {"title": "Test Project",
-                    "description": "Test Project123",
-                    "owner": jsonable_encoder(user_data)}
-    user_response = client.post("/users/", json=jsonable_encoder(user_data))
+    user_data = {
+        "email": "testuser1231@example.com",
+        "username": "Test User32",
+        "password": "testpassword32"
+    }
+    print(jsonable_encoder(user_data))
+    user_response = client.post("/users/", json=user_data)
+    assert user_response.status_code == 200
     user_id = user_response.json()["id"]
+    project_data = {
+        "title": "Test Project",
+        "description": "Test Project123",
+        "owner": user_id
+    }
 
     project_response = client.post(f"/users/{user_id}/projects/",
                                    json=project_data)
@@ -76,8 +85,9 @@ def test_create_project():
 # тесты для роута добавления изображения в проект пользователя
 def test_create_image_for_project():
     user_response = client.post("/users/",
-                                json={"name": "Test User",
-                                      "email": "test1@example.com"})
+                                json={"username": "Test User",
+                                      "email": "test1@example.com",
+                                      "password": "123"})
     user_id = user_response.json()["id"]
 
     project_response = client.post(f"/users/{user_id}/projects/",
@@ -95,8 +105,9 @@ def test_create_image_for_project():
 
 def test_get_project_count():
     user_response = client.post("/users/",
-                                json={"name": "Test User234634",
-                                      "email": "test34636@example.com"})
+                                json={"username": "Test User234634",
+                                      "email": "test34636@example.com",
+                                      "password": "test132"})
     user_id = user_response.json()["id"]
     client.post(f"/users/{user_id}/projects/",
                 json={"title": "Test Project2",

@@ -7,3 +7,493 @@ INFO:root:Created user. User id: 5, User name: test123, User email: test123@exam
 INFO:root:Project with id 2 created by user 1
 INFO:root:Retrieved all users. Count: 0
 INFO:root:Retrieved all users. Count: 0
+INFO:root:Created user. User id: 1, User name: string123, User email: string123
+WARNING:root:User with id 0 not found
+INFO:root:Retrieved user. User id: 1, User name: string123, User email: string123
+INFO:root:Updated user. User id: 1, User name: string, User email: string
+INFO:root:Deleted user. User id: 1
+DEBUG:aiosqlite:executing <function connect.<locals>.connector at 0x7f74df5d2560>
+DEBUG:aiosqlite:operation <function connect.<locals>.connector at 0x7f74df5d2560> completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f74dc78f640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7f74dcab1360>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f74dc78f640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7f74dcab1360>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f74dc78f640>, 'floor', 1, <built-in function floor>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f74dc78f640>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f74dc78f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f74dc78f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f74dc6900c0>, 'PRAGMA read_uncommitted', [])
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f74dc6900c0>, 'PRAGMA read_uncommitted', []) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f74dc6900c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f74dc6900c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f74dc6900c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f74dc6900c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f74dc78f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f74dc78f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f74dc78f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f74dc78f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f74dc6900c0>, 'PRAGMA main.table_info("user")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f74dc6900c0>, 'PRAGMA main.table_info("user")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f74dc6900c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f74dc6900c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f74dc6900c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f74dc6900c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f74dc78f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f74dc78f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f74dc6900c0>, 'PRAGMA temp.table_info("user")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f74dc6900c0>, 'PRAGMA temp.table_info("user")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f74dc6900c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f74dc6900c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f74dc6900c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f74dc6900c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f74dc78f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f74dc78f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f74dc6900c0>, 'PRAGMA main.table_info("users")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f74dc6900c0>, 'PRAGMA main.table_info("users")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f74dc6900c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f74dc6900c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f74dc6900c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f74dc6900c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f74dc78f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f74dc78f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f74dc6900c0>, 'PRAGMA main.table_info("projects")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f74dc6900c0>, 'PRAGMA main.table_info("projects")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f74dc6900c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f74dc6900c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f74dc6900c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f74dc6900c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f74dc78f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f74dc78f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f74dc6900c0>, 'PRAGMA main.table_info("images")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f74dc6900c0>, 'PRAGMA main.table_info("images")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f74dc6900c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f74dc6900c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f74dc6900c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f74dc6900c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f74dc78f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f74dc78f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f74dc6900c0>, '\nCREATE TABLE user (\n\tid CHAR(36) NOT NULL, \n\temail VARCHAR(320) NOT NULL, \n\thashed_password VARCHAR(1024) NOT NULL, \n\tis_active BOOLEAN NOT NULL, \n\tis_superuser BOOLEAN NOT NULL, \n\tis_verified BOOLEAN NOT NULL, \n\tPRIMARY KEY (id)\n)\n\n', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f74dc6900c0>, '\nCREATE TABLE user (\n\tid CHAR(36) NOT NULL, \n\temail VARCHAR(320) NOT NULL, \n\thashed_password VARCHAR(1024) NOT NULL, \n\tis_active BOOLEAN NOT NULL, \n\tis_superuser BOOLEAN NOT NULL, \n\tis_verified BOOLEAN NOT NULL, \n\tPRIMARY KEY (id)\n)\n\n', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f74dc6900c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f74dc6900c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f74dc78f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f74dc78f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f74dc6900c0>, 'CREATE UNIQUE INDEX ix_user_email ON user (email)', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f74dc6900c0>, 'CREATE UNIQUE INDEX ix_user_email ON user (email)', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f74dc6900c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f74dc6900c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f74dc78f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f74dc78f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f74dc78f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f74dc78f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f74dc78f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f74dc78f640>) completed
+DEBUG:aiosqlite:executing <function connect.<locals>.connector at 0x7f084b042560>
+DEBUG:aiosqlite:operation <function connect.<locals>.connector at 0x7f084b042560> completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f08481ef640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7f084851d240>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f08481ef640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7f084851d240>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f08481ef640>, 'floor', 1, <built-in function floor>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f08481ef640>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f08481ef640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f08481ef640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f08480f00c0>, 'PRAGMA read_uncommitted', [])
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f08480f00c0>, 'PRAGMA read_uncommitted', []) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f08480f00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f08480f00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f08480f00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f08480f00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f08481ef640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f08481ef640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f08481ef640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f08481ef640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f08480f00c0>, 'PRAGMA main.table_info("user")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f08480f00c0>, 'PRAGMA main.table_info("user")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f08480f00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f08480f00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f08480f00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f08480f00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f08481ef640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f08481ef640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f08480f00c0>, 'PRAGMA main.table_info("users")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f08480f00c0>, 'PRAGMA main.table_info("users")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f08480f00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f08480f00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f08480f00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f08480f00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f08481ef640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f08481ef640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f08480f00c0>, 'PRAGMA main.table_info("projects")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f08480f00c0>, 'PRAGMA main.table_info("projects")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f08480f00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f08480f00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f08480f00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f08480f00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f08481ef640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f08481ef640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f08480f00c0>, 'PRAGMA main.table_info("images")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f08480f00c0>, 'PRAGMA main.table_info("images")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f08480f00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f08480f00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f08480f00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f08480f00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f08481ef640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f08481ef640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f08481ef640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f08481ef640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f08481ef640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f08481ef640>) completed
+DEBUG:aiosqlite:executing <function connect.<locals>.connector at 0x7fd92f8d2560>
+DEBUG:aiosqlite:operation <function connect.<locals>.connector at 0x7fd92f8d2560> completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fd92ca7f640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7fd92cda9240>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fd92ca7f640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7fd92cda9240>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fd92ca7f640>, 'floor', 1, <built-in function floor>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fd92ca7f640>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd92ca7f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd92ca7f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd92c9800c0>, 'PRAGMA read_uncommitted', [])
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd92c9800c0>, 'PRAGMA read_uncommitted', []) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd92c9800c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd92c9800c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd92c9800c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd92c9800c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fd92ca7f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fd92ca7f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd92ca7f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd92ca7f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd92c9800c0>, 'PRAGMA main.table_info("user")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd92c9800c0>, 'PRAGMA main.table_info("user")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd92c9800c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd92c9800c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd92c9800c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd92c9800c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd92ca7f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd92ca7f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd92c9800c0>, 'PRAGMA main.table_info("users")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd92c9800c0>, 'PRAGMA main.table_info("users")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd92c9800c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd92c9800c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd92c9800c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd92c9800c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd92ca7f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd92ca7f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd92c9800c0>, 'PRAGMA main.table_info("projects")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd92c9800c0>, 'PRAGMA main.table_info("projects")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd92c9800c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd92c9800c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd92c9800c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd92c9800c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd92ca7f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd92ca7f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd92c9800c0>, 'PRAGMA main.table_info("images")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd92c9800c0>, 'PRAGMA main.table_info("images")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd92c9800c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd92c9800c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd92c9800c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd92c9800c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method commit of sqlite3.Connection object at 0x7fd92ca7f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method commit of sqlite3.Connection object at 0x7fd92ca7f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fd92ca7f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fd92ca7f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7fd92ca7f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7fd92ca7f640>) completed
+DEBUG:aiosqlite:executing <function connect.<locals>.connector at 0x7fe174fb2560>
+DEBUG:aiosqlite:operation <function connect.<locals>.connector at 0x7fe174fb2560> completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fe17215f640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7fe172489240>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fe17215f640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7fe172489240>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fe17215f640>, 'floor', 1, <built-in function floor>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fe17215f640>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fe17215f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fe17215f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fe1720600c0>, 'PRAGMA read_uncommitted', [])
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fe1720600c0>, 'PRAGMA read_uncommitted', []) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fe1720600c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fe1720600c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fe1720600c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fe1720600c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fe17215f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fe17215f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fe17215f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fe17215f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fe1720600c0>, 'PRAGMA main.table_info("user")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fe1720600c0>, 'PRAGMA main.table_info("user")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fe1720600c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fe1720600c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fe1720600c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fe1720600c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fe17215f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fe17215f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fe1720600c0>, 'PRAGMA main.table_info("users")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fe1720600c0>, 'PRAGMA main.table_info("users")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fe1720600c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fe1720600c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fe1720600c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fe1720600c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fe17215f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fe17215f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fe1720600c0>, 'PRAGMA main.table_info("projects")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fe1720600c0>, 'PRAGMA main.table_info("projects")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fe1720600c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fe1720600c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fe1720600c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fe1720600c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fe17215f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fe17215f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fe1720600c0>, 'PRAGMA main.table_info("images")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fe1720600c0>, 'PRAGMA main.table_info("images")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fe1720600c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fe1720600c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fe1720600c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fe1720600c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method commit of sqlite3.Connection object at 0x7fe17215f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method commit of sqlite3.Connection object at 0x7fe17215f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fe17215f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fe17215f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7fe17215f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7fe17215f640>) completed
+DEBUG:aiosqlite:executing <function connect.<locals>.connector at 0x7fc3cad32560>
+DEBUG:aiosqlite:operation <function connect.<locals>.connector at 0x7fc3cad32560> completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fc3c7edf640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7fc3c8209240>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fc3c7edf640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7fc3c8209240>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fc3c7edf640>, 'floor', 1, <built-in function floor>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fc3c7edf640>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fc3c7edf640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fc3c7edf640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fc3c7de00c0>, 'PRAGMA read_uncommitted', [])
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fc3c7de00c0>, 'PRAGMA read_uncommitted', []) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fc3c7de00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fc3c7de00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fc3c7de00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fc3c7de00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fc3c7edf640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fc3c7edf640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fc3c7edf640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fc3c7edf640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fc3c7de00c0>, 'PRAGMA main.table_info("user")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fc3c7de00c0>, 'PRAGMA main.table_info("user")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fc3c7de00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fc3c7de00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fc3c7de00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fc3c7de00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fc3c7edf640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fc3c7edf640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fc3c7de00c0>, 'PRAGMA main.table_info("users")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fc3c7de00c0>, 'PRAGMA main.table_info("users")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fc3c7de00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fc3c7de00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fc3c7de00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fc3c7de00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fc3c7edf640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fc3c7edf640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fc3c7de00c0>, 'PRAGMA main.table_info("projects")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fc3c7de00c0>, 'PRAGMA main.table_info("projects")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fc3c7de00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fc3c7de00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fc3c7de00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fc3c7de00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fc3c7edf640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fc3c7edf640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fc3c7de00c0>, 'PRAGMA main.table_info("images")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fc3c7de00c0>, 'PRAGMA main.table_info("images")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fc3c7de00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fc3c7de00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fc3c7de00c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fc3c7de00c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method commit of sqlite3.Connection object at 0x7fc3c7edf640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method commit of sqlite3.Connection object at 0x7fc3c7edf640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fc3c7edf640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fc3c7edf640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7fc3c7edf640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7fc3c7edf640>) completed
+DEBUG:aiosqlite:executing <function connect.<locals>.connector at 0x7f5f31552560>
+DEBUG:aiosqlite:operation <function connect.<locals>.connector at 0x7f5f31552560> completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f5f2e6ff640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7f5f2ea29240>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f5f2e6ff640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7f5f2ea29240>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f5f2e6ff640>, 'floor', 1, <built-in function floor>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f5f2e6ff640>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f5f2e6ff640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f5f2e6ff640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f5f2e6000c0>, 'PRAGMA read_uncommitted', [])
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f5f2e6000c0>, 'PRAGMA read_uncommitted', []) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f5f2e6000c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f5f2e6000c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f5f2e6000c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f5f2e6000c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f5f2e6ff640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f5f2e6ff640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f5f2e6ff640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f5f2e6ff640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f5f2e6000c0>, 'PRAGMA main.table_info("user")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f5f2e6000c0>, 'PRAGMA main.table_info("user")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f5f2e6000c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f5f2e6000c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f5f2e6000c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f5f2e6000c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f5f2e6ff640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f5f2e6ff640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f5f2e6000c0>, 'PRAGMA main.table_info("users")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f5f2e6000c0>, 'PRAGMA main.table_info("users")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f5f2e6000c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f5f2e6000c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f5f2e6000c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f5f2e6000c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f5f2e6ff640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f5f2e6ff640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f5f2e6000c0>, 'PRAGMA main.table_info("projects")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f5f2e6000c0>, 'PRAGMA main.table_info("projects")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f5f2e6000c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f5f2e6000c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f5f2e6000c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f5f2e6000c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f5f2e6ff640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f5f2e6ff640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f5f2e6000c0>, 'PRAGMA main.table_info("images")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f5f2e6000c0>, 'PRAGMA main.table_info("images")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f5f2e6000c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f5f2e6000c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f5f2e6000c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f5f2e6000c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f5f2e6ff640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f5f2e6ff640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f5f2e6ff640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f5f2e6ff640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f5f2e6ff640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f5f2e6ff640>) completed
+DEBUG:aiosqlite:executing <function connect.<locals>.connector at 0x7fd763ff2560>
+DEBUG:aiosqlite:operation <function connect.<locals>.connector at 0x7fd763ff2560> completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fd76119f640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7fd7614c9240>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fd76119f640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7fd7614c9240>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fd76119f640>, 'floor', 1, <built-in function floor>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fd76119f640>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd76119f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd76119f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd76109c0c0>, 'PRAGMA read_uncommitted', [])
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd76109c0c0>, 'PRAGMA read_uncommitted', []) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd76109c0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd76109c0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd76109c0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd76109c0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fd76119f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fd76119f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd76119f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd76119f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd76109c0c0>, 'PRAGMA main.table_info("user")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd76109c0c0>, 'PRAGMA main.table_info("user")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd76109c0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd76109c0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd76109c0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd76109c0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd76119f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd76119f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd76109c0c0>, 'PRAGMA main.table_info("users")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd76109c0c0>, 'PRAGMA main.table_info("users")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd76109c0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd76109c0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd76109c0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd76109c0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd76119f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd76119f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd76109c0c0>, 'PRAGMA main.table_info("projects")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd76109c0c0>, 'PRAGMA main.table_info("projects")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd76109c0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd76109c0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd76109c0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd76109c0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd76119f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7fd76119f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd76109c0c0>, 'PRAGMA main.table_info("images")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7fd76109c0c0>, 'PRAGMA main.table_info("images")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd76109c0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7fd76109c0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd76109c0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7fd76109c0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method commit of sqlite3.Connection object at 0x7fd76119f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method commit of sqlite3.Connection object at 0x7fd76119f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fd76119f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fd76119f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7fd76119f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7fd76119f640>) completed
+DEBUG:aiosqlite:executing <function connect.<locals>.connector at 0x7fd76121f7f0>
+DEBUG:aiosqlite:operation <function connect.<locals>.connector at 0x7fd76121f7f0> completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fd76119f640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7fd7614c9240>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fd76119f640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7fd7614c9240>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fd76119f640>, 'floor', 1, <built-in function floor>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7fd76119f640>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fd76119f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fd76119f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fd76119f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7fd76119f640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7fd76119f640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7fd76119f640>) completed
+DEBUG:aiosqlite:executing <function connect.<locals>.connector at 0x7f222f732560>
+DEBUG:aiosqlite:operation <function connect.<locals>.connector at 0x7f222f732560> completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f222c8df640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7f222cc09240>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f222c8df640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7f222cc09240>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f222c8df640>, 'floor', 1, <built-in function floor>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f222c8df640>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f222c8df640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f222c8df640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f222c7dc0c0>, 'PRAGMA read_uncommitted', [])
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f222c7dc0c0>, 'PRAGMA read_uncommitted', []) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f222c7dc0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f222c7dc0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f222c7dc0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f222c7dc0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f222c8df640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f222c8df640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f222c8df640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f222c8df640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f222c7dc0c0>, 'PRAGMA main.table_info("user")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f222c7dc0c0>, 'PRAGMA main.table_info("user")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f222c7dc0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f222c7dc0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f222c7dc0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f222c7dc0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f222c8df640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f222c8df640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f222c7dc0c0>, 'PRAGMA main.table_info("users")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f222c7dc0c0>, 'PRAGMA main.table_info("users")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f222c7dc0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f222c7dc0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f222c7dc0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f222c7dc0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f222c8df640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f222c8df640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f222c7dc0c0>, 'PRAGMA main.table_info("projects")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f222c7dc0c0>, 'PRAGMA main.table_info("projects")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f222c7dc0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f222c7dc0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f222c7dc0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f222c7dc0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f222c8df640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x7f222c8df640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f222c7dc0c0>, 'PRAGMA main.table_info("images")', ())
+DEBUG:aiosqlite:operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x7f222c7dc0c0>, 'PRAGMA main.table_info("images")', ()) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f222c7dc0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f222c7dc0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f222c7dc0c0>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x7f222c7dc0c0>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f222c8df640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f222c8df640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f222c8df640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f222c8df640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f222c8df640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f222c8df640>) completed
+DEBUG:aiosqlite:executing <function connect.<locals>.connector at 0x7f222c95f7f0>
+DEBUG:aiosqlite:operation <function connect.<locals>.connector at 0x7f222c95f7f0> completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f222c8df640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7f222cc09240>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f222c8df640>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x7f222cc09240>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f222c8df640>, 'floor', 1, <built-in function floor>, deterministic=True)
+DEBUG:aiosqlite:operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x7f222c8df640>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f222c8df640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f222c8df640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f222c8df640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x7f222c8df640>) completed
+DEBUG:aiosqlite:executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f222c8df640>)
+DEBUG:aiosqlite:operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f222c8df640>) completed
+INFO:root:Retrieved all users. Count: 0
+INFO:root:Retrieved all users. Count: 0
+INFO:root:Retrieved all users. Count: 0
+INFO:root:Retrieved all users. Count: 0
+INFO:root:Retrieved all users. Count: 0
+INFO:root:Created user. User id: 1, User name: admin, User email: admin@example.com
+DEBUG:passlib.handlers.bcrypt:detected 'bcrypt' backend, version '4.0.1'
+DEBUG:passlib.handlers.bcrypt:'bcrypt' backend lacks $2$ support, enabling workaround
+INFO:root:Created user. User id: 1, User name: admin, User email: admin@example.com

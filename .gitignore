@@ -13,3 +13,5 @@ coverage.xml
 test-coverage-tool
 app.db
 test.db
+app.log
+.pytest_cache

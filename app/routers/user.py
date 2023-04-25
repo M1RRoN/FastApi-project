@@ -9,6 +9,7 @@ from app.schemas.projects import Project
 from app.schemas.users import UserCreate, User, UserUpdate
 from database.database import get_db
 
+
 logging.basicConfig(filename='app.log', level=logging.DEBUG)
 
 router = APIRouter()
@@ -23,12 +24,13 @@ def read_users(db: Session = Depends(get_db)):
 
 @router.post("/users/", response_model=User)
 def create_user(user: UserCreate, db: Session = Depends(get_db)):
-    db_user = models.User(email=user.email, name=user.name)
+    db_user = models.User(email=user.email, username=user.username)
+    db_user.hashed_password = db_user.get_password_hash(password=user.password)
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
     logging.info(f"Created user. User id: {db_user.id}, "
-                 f"User name: {db_user.name}, "
+                 f"User name: {db_user.username}, "
                  f"User email: {db_user.email}")
     return db_user
 
@@ -40,7 +42,7 @@ def read_user(user_id: int, db: Session = Depends(get_db)):
         logging.warning(f"User with id {user_id} not found")
         raise HTTPException(status_code=404, detail="User not found")
     logging.info(f"Retrieved user. User id: {db_user.id}, "
-                 f"User name: {db_user.name}, "
+                 f"User name: {db_user.username}, "
                  f"User email: {db_user.email}")
     return db_user
 
@@ -50,12 +52,12 @@ def update_user(user_id: int, user: UserUpdate, db: Session = Depends(get_db)):
     db_user = db.query(models.User).filter(models.User.id == user_id).first()
     if db_user is None:
         raise HTTPException(status_code=404, detail="User not found")
-    db_user.name = user.name
+    db_user.name = user.username
     db_user.email = user.email
     db.commit()
     db.refresh(db_user)
     logging.info(f"Updated user. User id: {db_user.id}, "
-                 f"User name: {db_user.name}, "
+                 f"User name: {db_user.username}, "
                  f"User email: {db_user.email}")
     return db_user
 
@@ -88,5 +90,5 @@ def read_user_project_count(user_id: int, db: Session = Depends(get_db)):
     project_count = (db.query(models.Project)
                      .filter(models.Project.owner_id == user_id).count()
                      )
-    logging.info(f"User {db_user.name} has {project_count} projects")
+    logging.info(f"User {db_user.username} has {project_count} projects")
     return project_count

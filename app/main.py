@@ -18,7 +18,8 @@ app.include_router(image.router)
 def get_current_username(credentials: HTTPBasicCredentials = Depends(security)):
     correct_username = "testuser"
     correct_password = "testpassword"
-    if credentials.username != correct_username or credentials.password != correct_password:
+    if (credentials.username != correct_username or
+            credentials.password != correct_password):
         raise HTTPException(
             status_code=401,
             detail="Incorrect username or password",

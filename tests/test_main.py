@@ -1,14 +1,10 @@
-import factory
-from factory import Sequence
 from fastapi.encoders import jsonable_encoder
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
-from sqlalchemy.testing import db
 from starlette.testclient import TestClient
 
 from app.main import app
-from app.models.models import User, Project
-from app.schemas.users import UserCreate
+from app.models.models import User
 from database.database import Base, get_db
 
 SQLALCHEMY_DATABASE_URL_TEST = "sqlite:///./test.db"

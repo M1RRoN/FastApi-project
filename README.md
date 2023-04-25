@@ -15,6 +15,11 @@ Run docker
 ```bash
 docker-compose up --build
 ```
+After starting the container, the project will be available at:
+```bash
+http://localhost:8000/
+```
+
 ## API documentation
 This API is documented using Swagger UI.
 

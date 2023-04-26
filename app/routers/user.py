@@ -1,13 +1,18 @@
 import logging
+from datetime import timedelta
 from typing import List
 
 from fastapi import APIRouter, Depends, HTTPException
+from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
+from starlette import status
 
+from app.auth import authenticate_user, create_access_token, ACCESS_TOKEN_EXPIRE_MINUTES, create_jwt_token
 from app.models import models
 from app.schemas.projects import Project
-from app.schemas.users import UserCreate, User, UserUpdate
+from app.schemas.users import UserCreate, User, UserUpdate, UserWithToken, Token
 from database.database import get_db
+import jwt
 
 
 logging.basicConfig(filename='app.log', level=logging.DEBUG)
@@ -22,7 +27,7 @@ def read_users(db: Session = Depends(get_db)):
     return users
 
 
-@router.post("/users/", response_model=User)
+@router.post("/users/", response_model=UserWithToken)
 def create_user(user: UserCreate, db: Session = Depends(get_db)):
     db_user = models.User(email=user.email, username=user.username)
     db_user.hashed_password = db_user.get_password_hash(password=user.password)
@@ -31,8 +36,32 @@ def create_user(user: UserCreate, db: Session = Depends(get_db)):
     db.refresh(db_user)
     logging.info(f"Created user. User id: {db_user.id}, "
                  f"User name: {db_user.username}, "
-                 f"User email: {db_user.email}")
-    return db_user
+                 f"User email: {db_user.email}",)
+    token = create_jwt_token(db_user.username)
+    return {"id": db_user.id, "username": db_user.username, "email": db_user.email, "token": token}
+
+
+@router.post("/login/", response_model=Token)
+def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
+    user = authenticate_user(db, form_data.username, form_data.password)
+    if not user:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Incorrect username or password")
+    access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    access_token_claims = {"sub": user.username}
+    access_token = create_access_token(access_token_claims, access_token_expires)
+    return {"access_token": access_token, "token_type": "bearer"}
+
+
+# @router.delete("/logout/")
+# async def logout(current_user: User = Depends(get_current_active_user), db: Session = Depends(get_db)):
+#     db.query(models.Token).filter(models.Token.user_id == current_user.id).delete()
+#     db.commit()
+#     return {"detail": "Successfully logged out."}
+#
+#
+# @router.get("/users/me")
+# def read_users_me(current_user: models.User = Depends(get_current_active_user)):
+#     return current_user
 
 
 @router.get("/users/{user_id}", response_model=User)

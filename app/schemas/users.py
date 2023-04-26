@@ -1,6 +1,6 @@
 from typing import Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr, Field
 
 
 class UserBase(BaseModel):
@@ -9,7 +9,7 @@ class UserBase(BaseModel):
 
 
 class UserCreate(UserBase):
-    password: str
+    password: str = Field(alias="password")
 
 
 class UserUpdate(BaseModel):
@@ -28,3 +28,19 @@ class UserSummary(BaseModel):
     user_id: int
     project_count: int
     image_count: int
+
+
+class UserWithToken(User):
+    token: str
+
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+    class Config:
+        orm_mode = True
+
+
+class TokenData(BaseModel):
+    username: str

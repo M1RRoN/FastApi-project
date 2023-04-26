@@ -13,7 +13,7 @@ class User(Base):
     username = Column(String, index=True)
     email = Column(String, unique=True, index=True)
     hashed_password = Column(String)
-    projects = relationship("Project", back_populates="owner")
+    projects = relationship("models.models.Project", back_populates="owner")
 
     def verify_password(self, password):
         return pwd_context.verify(password, self.hashed_password)
@@ -29,8 +29,8 @@ class Project(Base):
     title = Column(String, index=True)
     description = Column(String, index=True)
     owner_id = Column(Integer, ForeignKey("users.id"))
-    owner = relationship("User", back_populates="projects")
-    images = relationship("Image", back_populates="project")
+    owner = relationship("models.models.User", back_populates="projects")
+    images = relationship("models.models.Image", back_populates="project")
 
 
 class Image(Base):
@@ -38,4 +38,4 @@ class Image(Base):
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     filename = Column(String, index=True)
     project_id = Column(Integer, ForeignKey("projects.id"))
-    project = relationship("Project", back_populates="images")
+    project = relationship("models.models.Project", back_populates="images")

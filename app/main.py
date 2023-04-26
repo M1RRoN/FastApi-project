@@ -1,7 +1,5 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from fastapi.security import HTTPBearer
-import jwt
-from jwt import ExpiredSignatureError, DecodeError
 
 from app.routers import user, project, image
 from database.database import Base, engine

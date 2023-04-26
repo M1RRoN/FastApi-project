@@ -44,22 +44,3 @@ def authenticate_user(db: Session, username: str, password: str):
     if not pwd_context.verify(password, user.hashed_password):
         return None
     return user
-
-
-# def get_current_active_user(db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)) -> User:
-#     try:
-#         payload = decode_jwt_token(token, SECRET_KEY, algorithms)
-#         username: str = payload.get("sub")
-#         if username is None:
-#             raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Could not validate credentials")
-#         token_data = TokenData(username=username)
-#     except PyJWTError:
-#         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Could not validate credentials")
-#
-#     user = db.query(User).filter(User.username == token_data.username).first()
-#     if not user:
-#         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
-#     if not user.is_active:
-#         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Inactive user")
-#     return user
-

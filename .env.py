@@ -1,2 +1,0 @@
-secret=12313123vfhgfhsdgdf
-algorithm=HS256

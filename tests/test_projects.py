@@ -29,25 +29,21 @@ def test_get_project():
         "email": "testuser11@example.com",
         "password": "testpassword"
     }
-    # Создаем пользователя, чтобы иметь owner_id для проекта
     user_response = client.post("/users/", json=user_data)
     assert user_response.status_code == 200
     user = user_response.json()
     user_id = user["id"]
 
-    # Данные проекта
     project_data = {
         "title": "Test Project",
         "description": "Test Project Description",
         "owner_id": user_id
     }
 
-    # Отправляем запрос на создание проекта
     project_response = client.post(f"/users/{user_id}/projects/", json=project_data)
     assert project_response.status_code == 200
     project = project_response.json()
 
-    # Отправляем запрос на получение проекта
     get_project_response = client.get(f"/projects/{project['id']}/")
     assert get_project_response.status_code == 200
     get_project_data = get_project_response.json()

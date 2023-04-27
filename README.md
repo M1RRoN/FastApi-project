@@ -3,7 +3,7 @@
 [![CI/CD](https://github.com/M1RRoN/FastApi-project/workflows/CI-CD/badge.svg)](https://github.com/M1RRoN/FastApi-project/actions)
 # FastApi project
 
-CRUD for users, projects, images. User registration and authorization 
+CRUD for users, projects, images. User registration and authorization.
 
 ## Installation
 

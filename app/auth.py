@@ -1,17 +1,21 @@
 import jwt
 from datetime import datetime, timedelta
 
-from fastapi import HTTPException
-from jwt import ExpiredSignatureError, DecodeError
+from fastapi import HTTPException, Header
+from fastapi.security import OAuth2PasswordBearer
+from jwt import ExpiredSignatureError, DecodeError, PyJWTError
 from passlib.context import CryptContext
 from sqlalchemy.orm import Session
 
 from app.models.models import User
+from app.schemas.users import TokenData
+from database.database import SessionLocal
 
 SECRET_KEY = "your-secret-key"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
 
 def create_jwt_token(username: str) -> str:
@@ -43,4 +47,26 @@ def authenticate_user(db: Session, username: str, password: str):
         return None
     if not pwd_context.verify(password, user.hashed_password):
         return None
+    return user
+
+
+def get_current_active_user(token: str = Header(...)) -> User:
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        username: str = payload.get("sub")
+        if username is None:
+            raise HTTPException(
+                status_code=401,
+                detail="Could not validate credentials"
+            )
+        token_data = TokenData(username=username)
+    except PyJWTError:
+        raise HTTPException(status_code=401, detail="Could not validate credentials")
+
+    db = SessionLocal()
+    user = db.query(User).filter(User.username == token_data.username).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    if not user.is_active:
+        raise HTTPException(status_code=400, detail="Inactive user")
     return user

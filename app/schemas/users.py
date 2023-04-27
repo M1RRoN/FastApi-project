@@ -44,3 +44,7 @@ class Token(BaseModel):
 
 class TokenData(BaseModel):
     username: str
+
+
+class LogoutRequest(BaseModel):
+    token: str

@@ -7,8 +7,8 @@ from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from starlette import status
 
-from app.auth import authenticate_user, create_access_token,\
-    ACCESS_TOKEN_EXPIRE_MINUTES, create_jwt_token
+from app.auth import authenticate_user, create_access_token, \
+    ACCESS_TOKEN_EXPIRE_MINUTES, create_jwt_token, oauth2_scheme
 from app.models import models
 from app.schemas.projects import Project
 from app.schemas.users import UserCreate, User, UserUpdate, UserWithToken, Token
@@ -59,6 +59,14 @@ def login_for_access_token(
     access_token_claims = {"sub": user.username}
     access_token = create_access_token(access_token_claims, access_token_expires)
     return {"access_token": access_token, "token_type": "bearer"}
+
+
+@router.post("/logout/")
+def logout(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
+    db_token = models.BlacklistToken(token=token)
+    db.add(db_token)
+    db.commit()
+    return {"detail": "Logged out successfully"}
 
 
 @router.get("/users/{user_id}", response_model=User)
